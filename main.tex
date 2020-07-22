@@ -1,4 +1,4 @@
-\documentclass[10pt,landscape,a4paper]{extarticle}
+\documentclass[11pt,landscape,a4paper]{extarticle}
 \input{setup.tex}
 
 \usepackage[headings]{fullpage}
@@ -10,12 +10,18 @@
 \usepackage{enumerate}
 \usepackage{color}
 
-%Setting custom font to FiraSans
-\usepackage[utf8]{inputenc}
+
+%Setting custom font to Helvetica
+\usepackage{nimbussans}
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
 \usepackage[T1]{fontenc}
 
+
+%Setting custom font to FiraSans
+\usepackage[utf8]{inputenc}
 \usepackage[sfdefault]{FiraSans}
 %\usepackage{newtxsf}
+
 
 %Custom commands
 \newcommand{\miss}{\\{\hspace{1cm}\color{red} \textbf{MISSING CONTENT}}\\}
@@ -41,8 +47,8 @@
 \fancyhf{}
 \rfoot{\raisebox{1cm}{Page \thepage}}
 
-\geometry{top=.4cm,left=.5cm,right=.5cm,bottom=.5cm}
-\linespread{.5}
+\geometry{top=.25cm,left=.25cm,right=.25cm,bottom=.25cm}
+\linespread{.25}
 \setlist{nosep}
 
 \setlength\parindent{0pt}
