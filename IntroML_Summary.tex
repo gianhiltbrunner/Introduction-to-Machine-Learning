@@ -1,30 +1,58 @@
-\documentclass[11pt]{scrartcl}
+\documentclass[10pt,landscape,a4paper]{extarticle}
+\input{setup.tex}
+
 \usepackage[headings]{fullpage}
-\usepackage[landscape,paper=a4paper,margin=0.25cm]{geometry}
-\usepackage[utf8]{inputenc}
+
 \usepackage{amsmath}
 \usepackage{mathtools}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{enumerate}
 \usepackage{color}
-\usepackage[dvipsnames]{xcolor}
 
-% Text formatting
-\usepackage{parskip}
-\setlength{\parskip}{4pt} %set space after paragraph
-\usepackage{titlesec}
-\titlespacing*{\section}{0pt}{12pt}{-4pt}
-\titleformat*{\section}{\normalfont\sffamily\bfseries\large\color{LimeGreen}}
-\titlespacing*{\subsection}{0pt}{-2pt}{-6pt}
-\titleformat*{\subsection}{\normalfont\sffamily\bfseries\color{CornflowerBlue}}
+%Setting custom font to FiraSans
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage[sfdefault]{FiraSans}
+%\usepackage{newtxsf}
+
+%Custom commands
+\newcommand{\miss}{\\{\hspace{1cm}\color{red} \textbf{MISSING CONTENT}}\\}
+
+% Custom math operators
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\E}{\mathrm{E}}
+\DeclareMathOperator*{\Var}{\mathrm{Var}}
+\DeclareMathOperator*{\w}{\mathbf{w}}
+\DeclareMathOperator*{\W}{\mathbf{W}}
+\DeclareMathOperator*{\x}{\mathbf{x}}
+\DeclareMathOperator*{\X}{\mathbf{X}}
+\DeclareMathOperator*{\y}{\mathbf{y}}
+\DeclareMathOperator*{\z}{\mathbf{z}}
+\DeclareMathOperator*{\vv}{\mathbf{v}}
+\newcommand{\eqqcolon}{\mathrel{\rotatebox[units=360]{180}{\ensuremath{\coloneqq}}}}
+
 
 \usepackage[all=tight]{savetrees}
 \usepackage{multicol}
 
+\fancyhf{}
+\rfoot{\raisebox{1cm}{Page \thepage}}
+
+\geometry{top=.4cm,left=.5cm,right=.5cm,bottom=.5cm}
+\linespread{.5}
+\setlist{nosep}
+
+\setlength\parindent{0pt}
+
 \begin{document}
 
 \begin{multicols*}{4}
+
+\noindent\large{\textbf{Introduction to Machine Learning} SS20} \\
+\normalsize{Let's learn some CBB\hspace{0.5cm}}\vspace{0.1cm}\hrule
 
 \input{Basics}
 \input{Regression}
